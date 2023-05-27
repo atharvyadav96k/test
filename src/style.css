@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* ---------------------- header and nav bar----------------------------- */
+body{
+    background-image: url(src/hacker2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    /* overflow-y: hidden; */
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.icon{
+    width: 45px;
+    height: 40px;
+}
+.container{
+    max-width: 1300px;
+    min-height: 500px;
+    /* background-color: rgb(109, 109, 109); */
+    margin: auto;
+    padding: 10px;
+}
+.topbar{
+    /* background-color: aqua; */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    padding: 5px;
+    width: 136px;
+    height: 136px;
+    background-color: white;
+    border-radius: 50%;
+}
+.logo img{
+    margin: 3px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 126px;
+}
+@media screen and (max-width:735px) {
+    .item{
+        float: right;
+        position: relative;
+        flex-direction: column;
+        visibility: hidden;
+        order: 1;
+        background-color: rgba(0, 128, 0, 0.675);
+        border: solid;
+        border-color: black;
+        border-width: 4px;
+        border-radius: 5px;
+    }
+    .item span{
+        width: 120px;
+        height: 40px;
+        margin: 7px;
+        border-radius: 7px;
+    }
+    .item .active{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+    .noactive{
+        background-color: rgb(255, 255, 255);
+    }
+    .yesactive{
+        background-color: rgb(0, 0, 0);
+        border: solid;
+        border-color: white;
+    }
+    .item span a{
+        float: right;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    label{
+        order: 0;
+        margin-top: 50px;
+        margin-left: 90px;
+        margin-bottom: 10px;
+        width: 50px;
+        background-color: rgb(0, 0, 0);
+    }
+    #click:checked ~ .item{
+        visibility: visible;
+    }
+    
+}
+@media screen and (min-width:736px) {
+    .item{
+        order: 0;
+        visibility: visible;
+    }
+    label{
+        order: 1;
+        width: 50px;
+        background-color: rgb(0, 0, 0);
+    }
+    #click:checked ~ .item{
+        visibility: hidden;
+    }
+    .item a{
+        margin-right: 20px;
+        padding: 10px 20px 10px 20px;
+    }
+    .item .active{
+        background-color: black;
+        color: white;
+        border: solid;
+        width: 5px;
+    }
+    .noactive a{
+        border: solid;
+        color: black;
+    }
+    .company_name_and_role h1{
+        font-size: 60px;
+    }
+    .company_name_and_role h2{
+        font-size: 40px;
+    }
+    .role_of_company{
+        width: 700px;
+        border: solid;
+        border-width: 4px;
+    }
+    .role_of_company p{
+        font-size: 23px;
+        font-weight:500;
+    }
+}
+.item{
+    display: flex;
+}
+input{
+    display: none;
+}
+.item span a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font: caption;
+    font-weight: bolder;
+    background-color: rgb(255, 251, 251);
+    border-radius: 5px;
+}
+/* ---------------------------------------- about company and course */
+.company_name_and_role{
+    font: caption;
+    margin: 20px 20px;
+}
+.company_name_and_role h1,h2{
+    font-weight: bolder;
+    color: white;
+}
+.company_name_and_role h2{
+    font-size: 23px;
+}
+.role_of_company{
+    margin-top: 20px;
+    background-color: rgba(0, 128, 0, 0.771);
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.role_of_company p{
+    color: white;
+    padding: 15px 15px 15px 15px;
+}
+.button{
+    margin: auto;
+    width: 200px;
+    height: 50px;
+}
+button{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(0, 128, 0);
+    border-radius: 10px;
+    border-color: black;
+    font: caption;
+    font-weight: bold;
+    color: white;
+}
+@media screen and (min-width:750px) {
+    .course_video{
+        margin: auto;
+        width:600px;
+        height: 339px;
+    }
+    .info{
+        width: 300px;
+    }
+}
+@media screen and (min-width: 495px) and (max-width:749px) {
+    .course_video{
+        margin: auto;
+        width: 450px;
+        height: 254px;
+    }
+    .info{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 494px) {
+    .course_video{
+        margin: auto;
+        width:320px;
+        height: 192px;
+    }
+    .role_of_company{
+        width: 310px;
+        border: solid;
+        border-width: 4px;
+    }
+    .info{
+        width: 220px;
+    }
+}
+.footer{
+    margin-top: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    /* width: 100%; */
+    background-color: rgba(0, 48, 0, 0.741);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px;
+    font: caption;
+    font-size: 13px;
+}
+.info{
+    height: 200px;
+    margin: 10px;
+    background-color: rgb(0, 84, 0);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.info p{
+    color: white;
+}
