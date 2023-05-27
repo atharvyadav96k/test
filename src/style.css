@@ -4,7 +4,7 @@
 }
 /* ---------------------- header and nav bar----------------------------- */
 body{
-    background-image: url(src/hacker2.jpg);
+    background-image: url(hacker2.jpg);
     background-attachment: fixed;
     background-size: cover;
     /* overflow-y: hidden; */
