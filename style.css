@@ -4,7 +4,7 @@
 }
 /* ---------------------- header and nav bar----------------------------- */
 body{
-    background-image: url(hacker2.jpg);
+    background-image: url(src/hacker2.jpg);
     background-attachment: fixed;
     background-size: cover;
     /* overflow-y: hidden; */
@@ -36,11 +36,23 @@ body::-webkit-scrollbar {
     background-color: white;
     border-radius: 50%;
 }
+@keyframes logo_rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 .logo img{
     margin: 3px;
     width: 130px;
     height: 130px;
     border-radius: 50%;
+    animation: logo_rotate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
 }
 .navbar{
     display: flex;
@@ -161,18 +173,43 @@ input{
     font: caption;
     margin: 20px 20px;
 }
+@keyframes heading_move {
+    from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
 .company_name_and_role h1,h2{
     font-weight: bolder;
     color: white;
+    animation: heading_move;
+    animation-timing-function: ease-in-out;
+}
+.company_name_and_role h1{
+    animation-duration: 1.3s;
 }
 .company_name_and_role h2{
     font-size: 23px;
+    animation-duration: 2s;
+}
+@keyframes role_of_company_animation {
+    from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform: translateX(0px);
+    }
 }
 .role_of_company{
     margin-top: 20px;
     background-color: rgba(0, 128, 0, 0.771);
     border-radius: 5px;
     margin-right: 20px;
+    animation: role_of_company_animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
 }
 .role_of_company p{
     color: white;
@@ -216,8 +253,8 @@ button{
 @media screen and (max-width: 494px) {
     .course_video{
         margin: auto;
-        width:320px;
-        height: 192px;
+        width:280px;
+        height: 158px;
     }
     .role_of_company{
         width: 310px;
