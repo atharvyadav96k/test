@@ -4,6 +4,7 @@
 }
 /* ---------------------- header and nav bar----------------------------- */
 body{
+    background-color: green;
     background-image: url(src/hacker2.jpg);
     background-attachment: fixed;
     background-size: cover;
